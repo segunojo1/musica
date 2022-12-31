@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nn{
+  grid-template-columns: 81px auto;
+}
