@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .nn{
-  grid-template-columns: 81px auto;
+  grid-template-columns: 100px auto;
 }
