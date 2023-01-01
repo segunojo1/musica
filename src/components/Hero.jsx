@@ -8,14 +8,14 @@ import Album3 from '../assets/album4.png'
 
 const Hero = () => {
   return (
-    <div className=''>
+    <div className='mb-[3rem]'>
         <div className='relative mb-[1rem]'>
             <CiSearch className='absolute my-auto h-full ml-[2rem]'/>
-            <input type="text" className='p-[1.5rem] px-[4rem]  w-full text-lg' placeholder='       Search artists'/>
+            <input type="text" className='p-[1rem] px-[4rem]  w-full text-lg outline-text-col focus:outline-double bg-transparent rounded-full' placeholder='Search artists'/>
         </div>
         <div className='flex gap-[2rem]'>
             <img src={HeroImg} alt="hero" className=''/>
-            <div className=' grid gap-[.5rem] '>
+            <div className=' grid gap-[.5rem] overflow-hidden'>
                 <h1 className='text-3xl'>Top charts</h1>
                 <ChartsComp img={Album1} title='Tomorrows Tunes' name="Justin bieber" timestamp="3:50:5"/>
                 <ChartsComp img={Album2} title='Tomorrows Tunes' name="Justin bieber" timestamp="3:50:5"/>

@@ -8,7 +8,8 @@ module.exports = {
     extend: {
       colors: {
         'bla' : '#1D2123',
-        'dark' : '#1A1E1F'
+        'dark' : '#1A1E1F',
+        'text-col' : 'rgb(255,255,255,50%)'
       }
     },
   },

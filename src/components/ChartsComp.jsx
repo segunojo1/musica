@@ -8,7 +8,7 @@ const ChartsComp = ({img, title, name, timestamp}) => {
             <img src={img} alt="" />
             <div>
                 <p className='text-lg'>{title}</p>
-                <p className='text-sm text-[#383833]'>{name}</p>
+                <p className='text-sm text-text-col'>{name}</p>
                 <p>{timestamp}</p>
             </div>
         </div>

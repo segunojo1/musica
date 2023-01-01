@@ -1,5 +1,7 @@
 import React from 'react'
 import Hero from '../components/Hero'
+import NewReleases from '../components/NewReleases'
+import Popular from '../components/Popular'
 import SideBar from '../components/SideBar'
 
 const Home = () => {
@@ -8,6 +10,8 @@ const Home = () => {
         <SideBar />
         <div className=''>
             <Hero />
+            <NewReleases />
+            <Popular />
         </div>
         
     </div>

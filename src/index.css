@@ -5,3 +5,6 @@
 .nn{
   grid-template-columns: 100px auto;
 }
+.thr::-webkit-scrollbar {
+  display: none;
+}
