@@ -6,12 +6,13 @@ import SideBar from '../components/SideBar'
 
 const Home = () => {
   return (
-    <div className='grid nn'>
+    <div className='grid nn p-[2rem] pr-[5rem]'>
         <SideBar />
         <div className=''>
             <Hero />
             <NewReleases />
             <Popular />
+            
         </div>
         
     </div>

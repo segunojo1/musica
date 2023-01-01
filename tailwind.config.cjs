@@ -9,7 +9,9 @@ module.exports = {
       colors: {
         'bla' : '#1D2123',
         'dark' : '#1A1E1F',
-        'text-col' : 'rgb(255,255,255,50%)'
+        'text-col' : 'rgb(255,255,255,50%)',
+        'red' : 'red',
+        'transp' : 'rgba(0, 0, 0, 0.200)'
       }
     },
   },

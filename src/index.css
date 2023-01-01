@@ -7,4 +7,5 @@
 }
 .thr::-webkit-scrollbar {
   display: none;
+  background-color: rgba(0, 0, 0, 0.212);
 }
