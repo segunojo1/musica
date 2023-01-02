@@ -3,19 +3,24 @@ import Hero from '../components/Hero'
 import NewReleases from '../components/NewReleases'
 import Popular from '../components/Popular'
 import SideBar from '../components/SideBar'
+import { useState } from 'react'
+import { Context } from '../Context'
 
 const Home = () => {
+  const [size, setSize] = useState(window.innerWidth);
   return (
-    <div className='grid nn p-[2rem] pr-[5rem]'>
+    <Context.Provider value={{size, setSize}}>
+    <div className='fle nn p-[1rem] md:p-[2rem] md:pr-[5rem]'>
         <SideBar />
-        <div className=''>
-            <Hero />
+        <div className='ml-[3rem] md:ml-[7rem]'>
+            <Hero/>
             <NewReleases />
             <Popular />
             
         </div>
         
     </div>
+    </Context.Provider>
   )
 }
 

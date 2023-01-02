@@ -3,8 +3,8 @@ import Heart from '../assets/Heart.png'
 
 const ChartsComp = ({img, title, name, timestamp}) => {
   return (
-    <div className='bg-dark p-[1rem] flex items-center justify-between rounded-lg w-[29rem]'>
-        <div className='flex gap-[2rem]'>
+    <div className='bg-dark p-[1rem] flex items-center justify-between rounded-lg md:w-[29rem] w-[80%] shrink-0'>
+        <div className='flex flex-col md:flex-row gap-[2rem]'>
             <img src={img} alt="" />
             <div>
                 <p className='text-lg'>{title}</p>
