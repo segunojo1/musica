@@ -19,7 +19,7 @@ const Hero = () => {
       setSize(window.innerWidth);
   }
   return (
-    <div className='mb-[3rem]'>
+    <div className='mb-[3rem] mt-[3rem] md:mt-0'>
         <div className='relative mb-[1rem]'>
             <CiSearch className='absolute my-auto h-full ml-[2rem]'/>
             <input type="text" className='p-[1rem] px-[4rem]  w-full text-lg outline-text-col focus:outline-double bg-transparent rounded-full' placeholder='Search artists'/>

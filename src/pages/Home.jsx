@@ -8,8 +8,9 @@ import { Context } from '../Context'
 
 const Home = () => {
   const [size, setSize] = useState(window.innerWidth);
+  const [show, setShow] = useState(false)
   return (
-    <Context.Provider value={{size, setSize}}>
+    <Context.Provider value={{size, setSize, show, setShow}}>
     <div className='fle nn p-[1rem] md:p-[2rem] md:pr-[5rem]'>
         <SideBar />
         <div className='ml-[3rem] md:ml-[7rem]'>

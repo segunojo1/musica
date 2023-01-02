@@ -10,7 +10,7 @@ import Volume from '../assets/volume-high.png'
 const Player = () => {
   return (
     <div className='fixed bottom-0 backdrop-blur-xl bg-transp w-full'>
-        <div className='pr-[5rem] pl-[8rem] pb-[.7rem] justify-between flex'>
+        <div className='lg:pr-[5rem] lg:pl-[8rem] lg:pb-[.7rem] justify-between flex'>
         <div className='flex items-center gap-[10px]'>
             <img src={Music7} alt="" height='49px' width='49px' className='rounded-2xl'/>
             <div>
@@ -26,7 +26,7 @@ const Player = () => {
                 <img src={Next} alt="next"  className='cursor-pointer'/>
                 <img src={Repeat} alt="repeat"  className='cursor-pointer'/>
             </div>
-            <div className='w-[700px] h-[3px] bg-white/30'></div>
+            <div className='w-[100px] h-[3px] bg-white/30'></div>
         </div>
         <div className='flex items-center gap-[10px]'>
             <img src={Volume} alt="volume" className='cursor-pointer'/>
