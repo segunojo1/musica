@@ -5,23 +5,22 @@ import Popular from '../components/Popular'
 import SideBar from '../components/SideBar'
 import { useState } from 'react'
 import { Context } from '../Context'
+import Album from '../components/Album'
 
 const Home = () => {
-  const [size, setSize] = useState(window.innerWidth);
-  const [show, setShow] = useState(false)
+ 
   return (
-    <Context.Provider value={{size, setSize, show, setShow}}>
-    <div className='fle nn p-[1rem] md:p-[2rem] md:pr-[5rem]'>
-        <SideBar />
+    <div className=''>
+      
         <div className='ml-[3rem] md:ml-[7rem]'>
-            <Hero/>
+            {/* <Hero/>
             <NewReleases />
-            <Popular />
+            <Popular /> */}
+            <Album />
             
         </div>
         
     </div>
-    </Context.Provider>
   )
 }
 
