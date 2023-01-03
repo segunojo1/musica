@@ -8,11 +8,20 @@
 .thr::-webkit-scrollbar {
   display: none;
 }
-
+.v{
+  background-image: url('./assets/album1.png');
+  background-size: 100%;
+}
 .tran{
   animation: fadeIn 3s;
 }
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
+}
+
+.alb{
+ 
+  background-size: cover;
+  background-blend-mode: screen;
 }

@@ -13,10 +13,9 @@ const Home = () => {
     <div className=''>
       
         <div className='ml-[3rem] md:ml-[7rem]'>
-            {/* <Hero/>
+            <Hero/>
             <NewReleases />
-            <Popular /> */}
-            <Album />
+            <Popular />
             
         </div>
         
