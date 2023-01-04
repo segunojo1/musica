@@ -25,3 +25,6 @@
   background-size: cover;
   background-blend-mode: screen;
 }
+.lint {
+  filter: brightness(0.5)
+}

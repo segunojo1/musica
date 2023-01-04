@@ -50,7 +50,13 @@ const Player = () => {
     }
     //PREVIOUS SONG
     const prev = () => {
-        
+        const index = songsData.findIndex(x=> x.title == currentSong.title);
+        if(index == 0) {
+            setCurrentSong(songsData[songsData.length - 1])
+        }else{
+            setCurrentSong(songsData[index-1]);
+        }
+        setIsPlaying(true)
     }
   return (
     <div className='fixed bottom-0 backdrop-blur-xl bg-transp w-full'>
@@ -66,7 +72,7 @@ const Player = () => {
             <div className='flex items-center gap-[1.5rem] mb-[.5rem]'>
                 <img src={Shuffle} alt="shuffle"  className='cursor-pointer'/>
                 <img src={Previous} alt="Previous"  className='cursor-pointer' onClick={prev}/>
-                {isPlaying ? <BsPauseCircleFill onClick={playa}/> : <BsFillPlayCircleFill onClick={playa}/>} 
+                {!isPlaying ? <BsPauseCircleFill onClick={playa}/> : <BsFillPlayCircleFill onClick={playa}/>} 
                 <audio src={currentSong.src} ref={refCon}></audio>
                 <img src={Next} alt="next"  className='cursor-pointer' onClick={next}/>
                 <img src={Repeat} alt="repeat"  className='cursor-pointer'/>

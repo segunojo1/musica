@@ -10,6 +10,15 @@ function App() {
   const [size, setSize] = useState(window.innerWidth);
   const [show, setShow] = useState(false)
   const [isPlaying, setIsPlaying] = useState(true);
+  const [songAlb, setSongalb] = useState({title: '', desc: '', length: ''});
+
+  const showAlbum = (e) => {
+    const i = e.currentTarget.id;
+    console.log(i);
+    if(i == 1) {
+      setSongalb({title: ''})
+    }
+  }
   return (
     <Context.Provider value={{size, setSize, show, setShow, isPlaying, setIsPlaying}}>
       <BrowserRouter>
@@ -18,8 +27,8 @@ function App() {
             
           <SideBar/>
           <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/album' element={<Album />}/>
+            <Route path='/' element={<Home showAlbum={showAlbum}/>} />
+            <Route path='/album' element={<Album title desc length/>}/>
           </Routes>
           </div>
             <Player />
