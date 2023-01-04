@@ -28,7 +28,7 @@ const Hero = () => {
             <img src={size <= '762' ? MobileHero : HeroImg} alt="hero" className=''/>
             <div className=' grid gap-[.5rem] overflow-hidden'>
                 <h1 className='text-3xl'>Top charts</h1>
-                <div className='flex md:flex-col gap-[.5rem] overflow-scroll'>
+                <div className='flex md:flex-col gap-[.5rem] '>
                   <ChartsComp img={Album1} title='Tomorrows Tunes' name="Justin bieber" timestamp="3:50:5"/>
                   <ChartsComp img={Album2} title='Tomorrows Tunes' name="Justin bieber" timestamp="3:50:5"/>
                   <ChartsComp img={Album3} title='Tomorrows Tunes' name="Justin bieber" timestamp="3:50:5"/>

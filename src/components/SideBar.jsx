@@ -27,7 +27,7 @@ const SideBar = () => {
           </div>
           <div className='bg-bla tran'>
 
-            <div className={`p-[.5rem] md:p-[1rem] bg-dark grid gap-[30px] w-fit rounded-full lg:block  ${show ? 'block' : 'hidden'}`}>
+            <div className={`p-[.5rem]  bg-dark grid gap-[30px] w-fit rounded-full lg:block  ${show ? 'block' : 'hidden'}`}>
               <div className='flex gap-[1.5rem] p-[1rem]'>
                 <img src={Home} alt="home" />
                 <p  className='lg:hidden'>Home</p>
@@ -45,7 +45,7 @@ const SideBar = () => {
                 <p  className='lg:hidden'>Videos</p>
               </div>
             </div>
-            <div className={`p-[.5rem] md:p-[1rem] bg-dark grid gap-[30px] w-fit rounded-full lg:block  ${show ? 'block' : 'hidden'}`}>
+            <div className={`p-[.5rem] bg-dark grid gap-[30px] w-fit rounded-full lg:block  ${show ? 'block' : 'hidden'}`}>
               <div className="flex gap-[1.5rem] p-[1rem]">
                 <img src={Profile} alt="profile" />
                 <p className='lg:hidden'>Profile</p>

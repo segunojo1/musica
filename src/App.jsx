@@ -9,8 +9,9 @@ import Album from './pages/Album'
 function App() {
   const [size, setSize] = useState(window.innerWidth);
   const [show, setShow] = useState(false)
+  const [isPlaying, setIsPlaying] = useState(true);
   return (
-    <Context.Provider value={{size, setSize, show, setShow}}>
+    <Context.Provider value={{size, setSize, show, setShow, isPlaying, setIsPlaying}}>
       <BrowserRouter>
         <div className="App bg-bla text-white ">
           <div className='fle nn p-[1rem] md:p-[2rem] md:pr-[5rem]'>
