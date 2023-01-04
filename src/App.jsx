@@ -10,13 +10,30 @@ function App() {
   const [size, setSize] = useState(window.innerWidth);
   const [show, setShow] = useState(false)
   const [isPlaying, setIsPlaying] = useState(true);
-  const [songAlb, setSongalb] = useState({title: '', desc: '', length: ''});
+  const [songAlb, setSongalb] = useState({title: '', desc: '', length: '', img: ''});
 
   const showAlbum = (e) => {
     const i = e.currentTarget.id;
     console.log(i);
     if(i == 1) {
-      setSongalb({title: ''})
+      setSongalb({title: "Golden age of 80s", 
+      desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eligendi voluptate repellat, distinctio sunt maxime.",
+      length:"64songs- 3hrs",
+      img: e.currentTarget.children[0].children[0].children[0].src
+    });
+    
+    }else if(i == 2) {
+      setSongalb({title: "Reggae 'n' blues", 
+      desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eligendi voluptate repellat, distinctio sunt maxime.",
+      length:"30songs- 1hr",
+      img: e.currentTarget.children[0].children[0].children[0].src
+    })
+    }else{
+      setSongalb({title: "Tomorrow's Tunes", 
+      desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eligendi voluptate repellat, distinctio sunt maxime.",
+      length:"30songs- 1hr",
+      img: e.currentTarget.children[0].children[0].children[0].src
+    })
     }
   }
   return (
@@ -28,7 +45,7 @@ function App() {
           <SideBar/>
           <Routes>
             <Route path='/' element={<Home showAlbum={showAlbum}/>} />
-            <Route path='/album' element={<Album title desc length/>}/>
+            <Route path='/album' element={<Album title={songAlb.title} desc={songAlb.desc} length={songAlb.length} img= {songAlb.img}/>}/>
           </Routes>
           </div>
             <Player />

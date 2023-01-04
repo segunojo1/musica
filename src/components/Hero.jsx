@@ -29,8 +29,8 @@ const Hero = ({showAlbum}) => {
             <div className=' grid gap-[.5rem] overflow-hidden'>
                 <h1 className='text-3xl'>Top charts</h1>
                 <div className='flex md:flex-col gap-[.5rem] '>
-                  <ChartsComp id='1' img={Album1} title='Tomorrows Tunes' name="Justin bieber" timestamp="3:50:5" showAlbum={showAlbum}/>
-                  <ChartsComp id='2' img={Album2} title='Tomorrows Tunes' name="Justin bieber" timestamp="3:50:5" showAlbum={showAlbum}/>
+                  <ChartsComp id='1' img={Album1} title='Golden age of 80s' name="Sean Swadder" timestamp="3:50:5" showAlbum={showAlbum}/>
+                  <ChartsComp id='2' img={Album2} title='Raggae "n" blues ' name="DJ Yk Mule" timestamp="3:50:5" showAlbum={showAlbum}/>
                   <ChartsComp id='3' img={Album3} title='Tomorrows Tunes' name="Justin bieber" timestamp="3:50:5" showAlbum={showAlbum}/>
                 </div>
             </div>
