@@ -4,7 +4,7 @@ import Player from './components/Player'
 import SideBar from './components/SideBar'
 import { Context } from './Context'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Album from './components/Album'
+import Album from './pages/Album'
 
 function App() {
   const [size, setSize] = useState(window.innerWidth);

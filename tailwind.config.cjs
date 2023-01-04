@@ -11,7 +11,8 @@ module.exports = {
         'dark' : '#1A1E1F',
         'text-col' : 'rgb(255,255,255,50%)',
         'red' : 'red',
-        'transp' : 'rgba(0, 0, 0, 0.200)'
+        'transp' : 'rgba(0, 0, 0, 0.200)',
+        'bgg' : 'rgba(51,55,59,37%)'
       }
     },
   },

@@ -5,7 +5,7 @@ import Popular from '../components/Popular'
 import SideBar from '../components/SideBar'
 import { useState } from 'react'
 import { Context } from '../Context'
-import Album from '../components/Album'
+import Album from './Album'
 
 const Home = () => {
  
