@@ -14,7 +14,7 @@ import { Context } from '../Context'
 
 const Player = () => {
     const {isPlaying, setIsPlaying} = useContext(Context)
-    const [currentSong, setCurrentSong] = useState(songsData[0])
+    const {currentSong, setCurrentSong} = useContext(Context)
     
     const refCon = useRef(null)
     useEffect(()=> {

@@ -1,22 +1,42 @@
 export const raggaeAlbum = [
     {
         id: 1,
-        url: '../assets/songs/song6.mp3'
+        img: '../assets/music6.png',
+        title: 'Let me love you - Krisx',
+        nam: 'Single',
+        timestamp:'3: 00',
+        url: '../assets/songs/song1.mp3'
     },
     {
         id: 2,
-        url: '../assets/songs/song7.mp3'
+        img: '../assets/music7.png',
+        title: 'Let me love you - Krisx',
+        nam: 'Single',
+        timestamp:'3: 00',
+        url: '../assets/songs/song2.mp3'
     },
     {
         id: 3,
-        url: '../assets/songs/song8.mp3'
+        img: '../assets/music8.png',
+        title: 'Let me love you - Krisx',
+        nam: 'Single',
+        timestamp:'3: 00',
+        url: '../assets/songs/song3.mp3'
     },
     {
         id: 4,
-        url: '../assets/songs/song9.mp3'
+        img: '../assets/music9.png',
+        title: 'Let me love you - Krisx',
+        nam: 'Single',
+        timestamp:'3: 00',
+        url: '../assets/songs/song4.mp3'
     },
     {
         id: 5,
-        url: '../assets/songs/song10.mp3'
+        img: '../assets/music10.png',
+        title: 'Let me love you - Krisx',
+        nam: 'Single',
+        timestamp:'3: 00',
+        url: '../assets/songs/song5.mp3'
     },
 ]
