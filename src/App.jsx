@@ -46,6 +46,7 @@ function App() {
       img: e.currentTarget.children[0].children[0].children[0].src
     });
     setSelectedsong(goldenAlbum)
+    setCurrentSong(goldenAlbum[0])
     // mapAlb(goldenAlbum)
     }else if(i == 2) {
       setSongalb({title: "Reggae 'n' blues", 
@@ -54,6 +55,7 @@ function App() {
       img: e.currentTarget.children[0].children[0].children[0].src
     })
     setSelectedsong(raggaeAlbum)
+    setCurrentSong(raggaeAlbum[0])
     }else{
       setSongalb({title: "Tomorrow's Tunes", 
       desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eligendi voluptate repellat, distinctio sunt maxime.",
@@ -61,6 +63,7 @@ function App() {
       img: e.currentTarget.children[0].children[0].children[0].src
     })
     setSelectedsong(tommorrowAlbum)
+    setCurrentSong(tommorrowAlbum[0]);
     }
   }
   return (

@@ -1,23 +1,23 @@
 export const tommorrowAlbum = [
     {
         id: 1,
-        img: '../assets/music11.png',
-        title: 'Let me love you - Krisx',
+        img: '../src/assets/music2.png',
+        title: 'hello',
         nam: 'Single',
         timestamp:'3: 00',
         url: '../assets/songs/song1.mp3'
     },
     {
         id: 2,
-        img: '../assets/music12.png',
-        title: 'Let me love you - Krisx',
+        img: '../src/assets/music3.png',
+        title: 'olorun agbaye',
         nam: 'Single',
         timestamp:'3: 00',
         url: '../assets/songs/song2.mp3'
     },
     {
         id: 3,
-        img: '../assets/music13.png',
+        img: '../src/assets/music4.png',
         title: 'Let me love you - Krisx',
         nam: 'Single',
         timestamp:'3: 00',
@@ -25,16 +25,16 @@ export const tommorrowAlbum = [
     },
     {
         id: 4,
-        img: '../assets/music14.png',
-        title: 'Let me love you - Krisx',
+        img: '../src/assets/music5.png',
+        title: 'all i want',
         nam: 'Single',
         timestamp:'3: 00',
         url: '../assets/songs/song4.mp3'
     },
     {
         id: 5,
-        img: '../assets/music15.png',
-        title: 'Let me love you - Krisx',
+        img: '../src/assets/music7.png',
+        title: 'hello world',
         nam: 'Single',
         timestamp:'3: 00',
         url: '../assets/songs/song5.mp3'

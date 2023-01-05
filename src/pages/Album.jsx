@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext, useRef } from 'react'
 import Album1 from '../assets/Lead-image.png'
 import Pause from '../assets/Play.png'
 import Collection from '../assets/music-square-add.png'
@@ -8,10 +8,22 @@ import AlbumComp from '../components/AlbumComp'
 import { raggaeAlbum } from '../Reggae'
 import { tommorrowAlbum } from '../TomAlbum'
 import { goldenAlbum } from '../GoldenAlbum'
+import { Context } from '../Context'
 
 const Album = ({title, desc, length, img, selectedSong}) => {
+    const audioref = useRef(null)
+    const {currentSong, setCurrentSong} = useContext(Context);
+    const {isPlaying, setIsPlaying} = useContext(Context);
+
     const playAll = () => {
 
+        setIsPlaying((prev) => !prev);
+        console.log(isPlaying);
+        if(isPlaying) {
+            audioref.current.play();
+        }else{
+            audioref.current.pause()
+        }
     }
   return (
     <div className='ml-[3rem] md:ml-[7rem] grid gap-[3rem]'>
@@ -27,11 +39,12 @@ const Album = ({title, desc, length, img, selectedSong}) => {
                     <img src={Pause} alt="" width='16px' height='16px'/>
                     <p>Play all</p>
                 </div>
-                <div className='flex gap-[1rem] text-[#EFEEE0] p-[1.5rem] rounded-full bg-[transp] items-center'>
+                <div className='flex gap-[1rem] text-[#EFEEE0] p-[1.5rem] rounded-full bg-transp items-center'>
                     <img src={Collection} alt="" />
                     <p>Add to Collection</p>
                 </div>
-                <img src={Heart} alt="like" className='p-[1.5rem] rounded-full bg-[transp]'/>
+                <audio src={currentSong.url} ref={audioref} ></audio>
+                <img src={Heart} alt="like" className='p-[1.5rem] rounded-full bg-transp'/>
             </div>
             
         </div>
