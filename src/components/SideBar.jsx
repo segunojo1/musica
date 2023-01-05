@@ -21,7 +21,6 @@ const SideBar = () => {
   const clickFunc = () => {
     console.log(show);
     setShow(prev => !prev)
-    
   }
   return (
     <div className='fixed'>
