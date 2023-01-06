@@ -70,7 +70,7 @@ function App() {
             
           <SideBar/>
           <Routes>
-            <Route path='/home' element={<Home showAlbum={showAlbum}/>} />
+            <Route path='/home' element={<Home showAlbum={showAlbum} refCon={refCon}/>} />
             <Route path='/home/album' element={<Album title={songAlb.title} desc={songAlb.desc} length={songAlb.length} img= {songAlb.img} selectedSong={selectedSong} refCon={refCon}/>}/>
           </Routes>
           </div>

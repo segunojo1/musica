@@ -41,13 +41,13 @@ const Player = ({refCon}) => {
     //NEXT SONG
     const next = () => {
         if(selectedSong == goldenAlbum){
-
             const index = goldenAlbum.findIndex(x=> x.title == currentSong.title)
             console.log(index);
             if(index == 4) {
                 setCurrentSong(goldenAlbum[0])
             }else{
                 setCurrentSong(goldenAlbum[index+1])
+                refCon.current.play()
             }
         }else if(selectedSong == raggaeAlbum){
 
@@ -58,7 +58,7 @@ const Player = ({refCon}) => {
             }else{
                 setCurrentSong(raggaeAlbum[index+1])
             }
-        }else{
+        }else if(selectedSong == tommorrowAlbum){
             const index = tommorrowAlbum.findIndex(x=> x.title == currentSong.title)
             console.log(index);
             if(index == 4) {
@@ -87,7 +87,7 @@ const Player = ({refCon}) => {
             }else{
                 setCurrentSong(raggaeAlbum[index-1]);
             }
-        }else{
+        }else if(selectedSong == tommorrowAlbum){
             const index = tommorrowAlbum.findIndex(x=> x.title == currentSong.title);
             if(index == 0) {
                 setCurrentSong(tommorrowAlbum[tommorrowAlbum.length - 1])
@@ -112,7 +112,7 @@ const Player = ({refCon}) => {
                 <img src={Shuffle} alt="shuffle"  className='cursor-pointer'/>
                 <img src={Previous} alt="Previous"  className='cursor-pointer' onClick={prev}/>
                 {!isPlaying ? <BsPauseCircleFill onClick={playa}/> : <BsFillPlayCircleFill onClick={playa}/>} 
-                <audio src={currentSong.url} ref={refCon}></audio>
+                <audio src={currentSong.url} ref={refCon} preload="auto"></audio>
                 <img src={Next} alt="next"  className='cursor-pointer' onClick={next}/>
                 <img src={Repeat} alt="repeat"  className='cursor-pointer'/>
             </div>

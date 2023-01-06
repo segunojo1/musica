@@ -7,15 +7,15 @@ import { useState } from 'react'
 import { Context } from '../Context'
 import Album from './Album'
 
-const Home = ({showAlbum}) => {
+const Home = ({showAlbum, refCon}) => {
  
   return (
     <div className=''>
       
         <div className='ml-[3rem] md:ml-[7rem]'>
             <Hero showAlbum={showAlbum}/>
-            <NewReleases />
-            <Popular />
+            <NewReleases refCon={refCon}/>
+            <Popular refCon={refCon}/>
             
         </div>
         

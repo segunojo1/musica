@@ -24,11 +24,11 @@ const Hero = ({showAlbum}) => {
             <CiSearch className='absolute my-auto h-full ml-[2rem]'/>
             <input type="text" className='p-[1rem] px-[4rem]  w-full text-lg outline-text-col focus:outline-double bg-transparent rounded-full' placeholder='Search artists'/>
         </div>
-        <div className='flex flex-col lg:flex-row gap-[2rem]'>
+        <div className='flex flex-col 2xl:flex-row gap-[2rem]'>
             <img src={size <= '762' ? MobileHero : HeroImg} alt="hero" className=''/>
             <div className=' grid gap-[.5rem] overflow-hidden'>
                 <h1 className='text-3xl'>Top charts</h1>
-                <div className='flex md:flex-col gap-[.5rem] '>
+                <div className='flex md:flex-col gap-[.5rem] chart'>
                   <ChartsComp id='1' img={Album1} title='Golden age of 80s' name="Sean Swadder" timestamp="3:50:5" showAlbum={showAlbum}/>
                   <ChartsComp id='2' img={Album2} title='Raggae "n" blues ' name="DJ Yk Mule" timestamp="3:50:5" showAlbum={showAlbum}/>
                   <ChartsComp id='3' img={Album3} title='Tomorrows Tunes' name="Justin bieber" timestamp="3:50:5" showAlbum={showAlbum}/>
