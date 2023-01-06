@@ -5,7 +5,7 @@ export const tommorrowAlbum = [
         title: 'hello',
         nam: 'Single',
         timestamp:'3: 00',
-        url: '../assets/songs/song1.mp3'
+        url: '../src/assets/songs/song11.mp3'
     },
     {
         id: 2,
@@ -13,7 +13,7 @@ export const tommorrowAlbum = [
         title: 'olorun agbaye',
         nam: 'Single',
         timestamp:'3: 00',
-        url: '../assets/songs/song2.mp3'
+        url: '../src/assets/songs/song12.mp3'
     },
     {
         id: 3,
@@ -21,7 +21,7 @@ export const tommorrowAlbum = [
         title: 'Let me love you - Krisx',
         nam: 'Single',
         timestamp:'3: 00',
-        url: '../assets/songs/song3.mp3'
+        url: '../src/assets/songs/song13.mp3'
     },
     {
         id: 4,
@@ -29,7 +29,7 @@ export const tommorrowAlbum = [
         title: 'all i want',
         nam: 'Single',
         timestamp:'3: 00',
-        url: '../assets/songs/song4.mp3'
+        url: '../src/assets/songs/song14.mp3'
     },
     {
         id: 5,
@@ -37,6 +37,6 @@ export const tommorrowAlbum = [
         title: 'hello world',
         nam: 'Single',
         timestamp:'3: 00',
-        url: '../assets/songs/song5.mp3'
+        url: '../src/assets/songs/song15.mp3'
     },
 ]

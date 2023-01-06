@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import Home from './pages/Home'
 import Player from './components/Player'
 import SideBar from './components/SideBar'
@@ -20,22 +20,18 @@ function App() {
   const [songAlb, setSongalb] = useState({title: '', desc: '', length: '', img: ''});
   const [selectedSong, setSelectedsong] = useState([])
 
-  //render album based on the one clicked
-  // const mapAlb = (arr) => {
-  //   arr.map(({id,title,nam,timestamp,img})=> {
-  //     return <div className='flex items-center justify-between bg-bgg p-[.7rem] rounded-xl'>
-  //     <div className='flex items-center gap-[1rem]'>
-  //         <img src={img} alt="" width='39px' height='39px' className='rounded-xl'/>
-  //         <img src={Heart} alt="" />
-  //     </div>
-  //     <p>{title}</p>
-  //     <p>{nam}</p>
-  //     <p>{timestamp}</p>
-  //     <img src={Vertical} alt="" />
-  // </div>
-  //   })
-  // }
+  const refCon = useRef(null)
 
+  const next = (alb) => {
+    const index = alb.findIndex(x=> x.title == currentSong.title)
+    if(index == 3) {
+        setCurrentSong(alb[0])
+    }else{
+        setCurrentSong(alb[index+1])
+    }
+    setIsPlaying(true)
+    // playNext()
+}
   const showAlbum = (e) => {
     const i = e.currentTarget.id;
     console.log(i);
@@ -67,18 +63,18 @@ function App() {
     }
   }
   return (
-    <Context.Provider value={{size, setSize, show, setShow, isPlaying, setIsPlaying, currentSong, setCurrentSong}}>
+    <Context.Provider value={{size, setSize, show, setShow, isPlaying, setIsPlaying, currentSong, setCurrentSong, selectedSong, setSelectedsong}}>
       <BrowserRouter>
         <div className="App bg-bla text-white ">
           <div className='fle nn p-[1rem] md:p-[2rem] md:pr-[5rem]'>
             
           <SideBar/>
           <Routes>
-            <Route path='/' element={<Home showAlbum={showAlbum}/>} />
-            <Route path='/home/album' element={<Album title={songAlb.title} desc={songAlb.desc} length={songAlb.length} img= {songAlb.img} selectedSong={selectedSong}/>}/>
+            <Route path='/home' element={<Home showAlbum={showAlbum}/>} />
+            <Route path='/home/album' element={<Album title={songAlb.title} desc={songAlb.desc} length={songAlb.length} img= {songAlb.img} selectedSong={selectedSong} refCon={refCon}/>}/>
           </Routes>
           </div>
-            <Player />
+            <Player refCon={refCon}/>
         </div>
       </BrowserRouter>
 

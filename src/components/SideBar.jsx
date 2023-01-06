@@ -32,7 +32,7 @@ const SideBar = () => {
           <div className='bg-bla tran'>
 
             <div className={`p-[.5rem]  bg-dark grid gap-[30px] w-fit rounded-full lg:block  ${show ? 'block' : 'hidden'}`}>
-                <NavLink to='/' className={({isActive}) => (
+                <NavLink to='/home' className={({isActive}) => (
                       isActive ? activeLink : norm
                 )
                 } >

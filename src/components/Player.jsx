@@ -11,12 +11,16 @@ import {BsPauseCircleFill} from 'react-icons/bs'
 import {BsFillPlayCircleFill} from 'react-icons/bs'
 import { songsData } from '../songData'
 import { Context } from '../Context'
+import { goldenAlbum } from '../GoldenAlbum'
+import { raggaeAlbum } from '../Reggae'
+import { tommorrowAlbum } from '../TomAlbum'
 
-const Player = () => {
+const Player = ({refCon}) => {
     const {isPlaying, setIsPlaying} = useContext(Context)
     const {currentSong, setCurrentSong} = useContext(Context)
+    const {selectedSong, setSelectedsong} = useContext(Context)
     
-    const refCon = useRef(null)
+   
     useEffect(()=> {
         console.log(refCon);
         
@@ -33,28 +37,63 @@ const Player = () => {
             refCon.current.pause()
         }
     }
-    const playNext = () => {
-        refCon.current.play();  
-    }
     
     //NEXT SONG
     const next = () => {
-        const index = songsData.findIndex(x=> x.title == currentSong.title)
-        if(index == 3) {
-            setCurrentSong(songsData[0])
+        if(selectedSong == goldenAlbum){
+
+            const index = goldenAlbum.findIndex(x=> x.title == currentSong.title)
+            console.log(index);
+            if(index == 4) {
+                setCurrentSong(goldenAlbum[0])
+            }else{
+                setCurrentSong(goldenAlbum[index+1])
+            }
+        }else if(selectedSong == raggaeAlbum){
+
+            const index = raggaeAlbum.findIndex(x=> x.title == currentSong.title)
+            console.log(index);
+            if(index == 4) {
+                setCurrentSong(raggaeAlbum[0])
+            }else{
+                setCurrentSong(raggaeAlbum[index+1])
+            }
         }else{
-            setCurrentSong(songsData[index+1])
+            const index = tommorrowAlbum.findIndex(x=> x.title == currentSong.title)
+            console.log(index);
+            if(index == 4) {
+                setCurrentSong(tommorrowAlbum[0])
+            }else{
+                setCurrentSong(tommorrowAlbum[index+1])
+            }
         }
         setIsPlaying(true)
         // playNext()
     }
     //PREVIOUS SONG
     const prev = () => {
-        const index = songsData.findIndex(x=> x.title == currentSong.title);
-        if(index == 0) {
-            setCurrentSong(songsData[songsData.length - 1])
+        if(selectedSong == goldenAlbum) {
+
+            const index = goldenAlbum.findIndex(x=> x.title == currentSong.title);
+            if(index == 0) {
+                setCurrentSong(goldenAlbum[tommorrowAlbum.length - 1])
+            }else{
+                setCurrentSong(goldenAlbum[index-1]);
+            }
+        }else if(selectedSong == raggaeAlbum) {
+            const index = raggaeAlbum.findIndex(x=> x.title == currentSong.title);
+            if(index == 0) {
+                setCurrentSong(raggaeAlbum[tommorrowAlbum.length - 1])
+            }else{
+                setCurrentSong(raggaeAlbum[index-1]);
+            }
         }else{
-            setCurrentSong(songsData[index-1]);
+            const index = tommorrowAlbum.findIndex(x=> x.title == currentSong.title);
+            if(index == 0) {
+                setCurrentSong(tommorrowAlbum[tommorrowAlbum.length - 1])
+            }else{
+                setCurrentSong(tommorrowAlbum[index-1]);
+            }
         }
         setIsPlaying(true)
     }
@@ -73,7 +112,7 @@ const Player = () => {
                 <img src={Shuffle} alt="shuffle"  className='cursor-pointer'/>
                 <img src={Previous} alt="Previous"  className='cursor-pointer' onClick={prev}/>
                 {!isPlaying ? <BsPauseCircleFill onClick={playa}/> : <BsFillPlayCircleFill onClick={playa}/>} 
-                <audio src={currentSong.src} ref={refCon}></audio>
+                <audio src={currentSong.url} ref={refCon}></audio>
                 <img src={Next} alt="next"  className='cursor-pointer' onClick={next}/>
                 <img src={Repeat} alt="repeat"  className='cursor-pointer'/>
             </div>

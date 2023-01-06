@@ -5,7 +5,7 @@ export const goldenAlbum = [
         title: 'Olurun Agbaye - Nathaniel Bassey,  Chandler Moore, Oba',
         nam: 'Hallelujah Again(Revelation 19: 3)',
         timestamp:'7: 16',
-        url: '../src/assets/songs/song5.mp3'
+        url: '../src/assets/songs/song1.mp3'
     },
     {
         id: 2,
@@ -34,7 +34,7 @@ export const goldenAlbum = [
     {
         id: 5,
         img: '../src/assets/music6.png',
-        title: 'Let me love you - Krisx',
+        title: 'songggg',
         nam: 'Single',
         timestamp:'3: 00',
         url: '../src/assets/songs/song5.mp3'

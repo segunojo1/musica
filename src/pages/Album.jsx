@@ -10,19 +10,20 @@ import { tommorrowAlbum } from '../TomAlbum'
 import { goldenAlbum } from '../GoldenAlbum'
 import { Context } from '../Context'
 
-const Album = ({title, desc, length, img, selectedSong}) => {
+const Album = ({title, desc, length, img, selectedSong, refCon}) => {
     const audioref = useRef(null)
     const {currentSong, setCurrentSong} = useContext(Context);
     const {isPlaying, setIsPlaying} = useContext(Context);
 
     const playAll = () => {
-
+        console.log(currentSong);
+        setCurrentSong(selectedSong[0])
         setIsPlaying((prev) => !prev);
         console.log(isPlaying);
         if(isPlaying) {
-            audioref.current.play();
+            refCon.current.play();
         }else{
-            audioref.current.pause()
+            refCon.current.pause()
         }
     }
   return (
@@ -43,7 +44,7 @@ const Album = ({title, desc, length, img, selectedSong}) => {
                     <img src={Collection} alt="" />
                     <p>Add to Collection</p>
                 </div>
-                <audio src={currentSong.url} ref={audioref} ></audio>
+                {/* <audio src={currentSong.url} ref={audioref} ></audio> */}
                 <img src={Heart} alt="like" className='p-[1.5rem] rounded-full bg-transp'/>
             </div>
             
