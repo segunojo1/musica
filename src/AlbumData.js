@@ -12,7 +12,7 @@ export const data1 = [
         img: Music1,
         title: 'Life in a bubble',
         nam: 'The von',
-        url: '../src/assets/songs/song1.mp3'
+        url: 'song1.mp3'
     },
     {
         id: 1,
