@@ -23,7 +23,6 @@ const Player = ({refCon}) => {
    
     useEffect(()=> {
         console.log(refCon);
-        
     },[]);
     //PLAY AND PAUSE
     // setIsPlaying((prev) => !prev);
@@ -42,7 +41,6 @@ const Player = ({refCon}) => {
     const next = () => {
         if(selectedSong == goldenAlbum){
             const index = goldenAlbum.findIndex(x=> x.title == currentSong.title)
-            console.log(index);
             if(index == 4) {
                 setCurrentSong(goldenAlbum[0])
             }else{
@@ -100,7 +98,7 @@ const Player = ({refCon}) => {
   return (
     <div className='fixed bottom-0 backdrop-blur-xl bg-transp w-full'>
         <div className='lg:pr-[5rem] lg:pl-[8rem] lg:pb-[.7rem] justify-between flex'>
-        <div className='flex items-center gap-[10px]'>
+        <div className='flex items-center gap-[10px] w-[250px]'>
             <img src={Music7} alt="" height='49px' width='49px' className='rounded-2xl'/>
             <div>
                 <p>{currentSong.title}</p>
@@ -116,7 +114,7 @@ const Player = ({refCon}) => {
                 <img src={Next} alt="next"  className='cursor-pointer' onClick={next}/>
                 <img src={Repeat} alt="repeat"  className='cursor-pointer'/>
             </div>
-            <div className='w-[100px] h-[3px] bg-white/30'></div>
+            <div className='w-[500px] h-[3px] bg-white/30'></div>
         </div>
         <div className='flex items-center gap-[10px]'>
             <img src={Volume} alt="volume" className='cursor-pointer'/>

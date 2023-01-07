@@ -24,7 +24,7 @@ const Hero = ({showAlbum}) => {
             <CiSearch className='absolute my-auto h-full ml-[2rem]'/>
             <input type="text" className='p-[1rem] px-[4rem]  w-full text-lg outline-text-col focus:outline-double bg-transparent rounded-full' placeholder='Search artists'/>
         </div>
-        <div className='flex flex-col 2xl:flex-row gap-[2rem]'>
+        <div className='flex flex-col xl:flex-row gap-[2rem]'>
             <img src={size <= '762' ? MobileHero : HeroImg} alt="hero" className=''/>
             <div className=' grid gap-[.5rem] overflow-hidden'>
                 <h1 className='text-3xl'>Top charts</h1>

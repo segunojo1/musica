@@ -5,7 +5,6 @@ import Heart from '../assets/Heart.png'
 const ChartsComp = ({img, title, name, timestamp, id, showAlbum}) => {
 
   const albumRef = useRef(null);
-  console.log(albumRef);
 
  
   return (

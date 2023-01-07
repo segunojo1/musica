@@ -1,6 +1,6 @@
 export const raggaeAlbum = [
     {
-        id: 1,
+        id: 0,
         img: '../src/assets/music6.png',
         title: 'Let me love you - Krisx',
         nam: 'Single',
@@ -8,7 +8,7 @@ export const raggaeAlbum = [
         url: '../src/assets/songs/song6.mp3'
     },
     {
-        id: 2,
+        id: 1,
         img: '../src/assets/music7.png',
         title: 'eeioeid',
         nam: 'Single',
@@ -16,7 +16,7 @@ export const raggaeAlbum = [
         url: '../src/assets/songs/song7.mp3'
     },
     {
-        id: 3,
+        id: 2,
         img: '../src/assets/music8.png',
         title: 'be a school',
         nam: 'Single',
@@ -24,7 +24,7 @@ export const raggaeAlbum = [
         url: '../src/assets/songs/song8.mp3'
     },
     {
-        id: 4,
+        id: 3,
         img: '../src/assets/music2.png',
         title: 'have a school',
         nam: 'Single',
@@ -32,7 +32,7 @@ export const raggaeAlbum = [
         url: '../src/assets/songs/song9.mp3'
     },
     {
-        id: 5,
+        id: 4,
         img: '../src/assets/music3.png',
         title: 'the lord of all',
         nam: 'Single',

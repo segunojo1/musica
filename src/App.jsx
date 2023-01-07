@@ -22,19 +22,18 @@ function App() {
 
   const refCon = useRef(null)
 
-  const next = (alb) => {
-    const index = alb.findIndex(x=> x.title == currentSong.title)
-    if(index == 3) {
-        setCurrentSong(alb[0])
-    }else{
-        setCurrentSong(alb[index+1])
-    }
-    setIsPlaying(true)
-    // playNext()
-}
+//   const next = (alb) => {
+//     const index = alb.findIndex(x=> x.title == currentSong.title)
+//     if(index == 3) {
+//         setCurrentSong(alb[0])
+//     }else{
+//         setCurrentSong(alb[index+1])
+//     }
+//     setIsPlaying(true)
+//     // playNext()
+// }
   const showAlbum = (e) => {
     const i = e.currentTarget.id;
-    console.log(i);
     if(i == 1) {
       setSongalb({title: "Golden age of 80s", 
       desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eligendi voluptate repellat, distinctio sunt maxime.",

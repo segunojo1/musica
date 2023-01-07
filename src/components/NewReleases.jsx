@@ -10,14 +10,14 @@ const NewReleases = ({refCon}) => {
 
     const playSong = (e) => {
         const id = e.currentTarget.id;
-        console.log(id);
         setSelectedsong(null);
         refCon.current.pause()
         setCurrentSong(data1[id])
-        setIsPlaying(prev=> !prev);
-        if(isPlaying) {
-            refCon.current.play();
-        }
+        refCon.current.play()
+        setIsPlaying(false);
+        // if(isPlaying) {
+        //     refCon.current.play();
+        // }
     }
 
     const items = data1.map(({id, img, title, nom})=> {
