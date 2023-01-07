@@ -9,7 +9,7 @@ import Volume from '../assets/volume-high.png'
 import Audio from '../assets/songs/song1.mp3'
 import {BsPauseCircleFill} from 'react-icons/bs'
 import {BsFillPlayCircleFill} from 'react-icons/bs'
-import { songsData } from '../songData'
+import { data1 } from '../AlbumData'
 import { Context } from '../Context'
 import { goldenAlbum } from '../GoldenAlbum'
 import { raggaeAlbum } from '../Reggae'
@@ -23,7 +23,9 @@ const Player = ({refCon}) => {
    
     useEffect(()=> {
         console.log(refCon);
+        setCurrentSong({...currentSong, progress: 0})
     },[]);
+    
     //PLAY AND PAUSE
     // setIsPlaying((prev) => !prev);
     const playa = () => {
@@ -65,12 +67,12 @@ const Player = ({refCon}) => {
                 setCurrentSong(tommorrowAlbum[index+1])
             }
         }else{
-            const index = songsData.findIndex(x=> x.title == currentSong.title)
-            console.log(index);
-            if(index == 4) {
-                setCurrentSong(songsData[0])
+            const index = data1.findIndex(x=> x.title == currentSong.title)
+            console.log(index);data1
+            if(index == 6) {
+                setCurrentSong(data1[0])
             }else{
-                setCurrentSong(songsData[index+1])
+                setCurrentSong(data1[index+1])
             }
         }
         setIsPlaying(true)
@@ -101,11 +103,12 @@ const Player = ({refCon}) => {
                 setCurrentSong(tommorrowAlbum[index-1]);
             }
         }else{
-            const index = songsData.findIndex(x=> x.title == currentSong.title);
+            const index = data1.findIndex(x=> x.title == currentSong.title);
             if(index == 0) {
-                setCurrentSong(songsData[songsData.length - 1])
+                setCurrentSong(data1[data1.length - 1])
             }else{
-                setCurrentSong(songsData[index-1]);
+                setCurrentSong(data1[index-1]);
+                
             }
         }
         setIsPlaying(true)
@@ -117,15 +120,29 @@ const Player = ({refCon}) => {
         const currentTime = refCon.current.currentTime
 
         setCurrentSong({...currentSong, progress: (currentTime/duration) * 100, length: duration})
+        if(currentTime == duration) {
+            next();
+        }
     }
+
+    //CHANGE PROGRESS OF SONG ON CLICK(forward the song)
+    const clickRef = useRef(null)
+    const checkWidth = (e) => {
+        const width = clickRef.current.clientWidth;
+        const offset = e.nativeEvent.offsetX;
+
+        const progress = offset / width;
+        refCon.current.currentTime = progress * currentSong.length
+    }
+
   return (
     <div className='fixed bottom-0 backdrop-blur-xl bg-transp w-full'>
-        <div className='lg:pr-[5rem] lg:pl-[8rem] lg:pb-[.7rem] justify-between flex'>
+        <div className='lg:pr-[5rem] lg:pl-[8rem] lg:pb-[.7rem] justify-between flex py-[1rem]'>
         <div className='flex items-center gap-[10px] w-[250px]'>
-            <img src={Music7} alt="" height='49px' width='49px' className='rounded-2xl'/>
+            <img src={currentSong.img} alt="" height='49px' width='49px' className='rounded-2xl'/>
             <div>
                 <p>{currentSong.title}</p>
-                <p className='text-sm text-text-col'>James</p>
+                <p className='text-sm text-text-col'>{currentSong.nam}</p>
             </div>
         </div>
         <div className='flex flex-col justify-center items-center'>
@@ -138,8 +155,8 @@ const Player = ({refCon}) => {
                 <img src={Repeat} alt="repeat"  className='cursor-pointer'/>
             </div>
             <div className='w-[100%]'>
-                <div className="navigation w-[500px] h-[3px] bg-white/30">
-                    <div className="seekbar bg-red h-[3px] " style={{width: `${currentSong.progress}%`}}></div>
+                <div className="navigation w-[500px] h-[3px] bg-white/30" onClick={checkWidth} ref = {clickRef}>
+                    <div className="seekbar bg-[#FACD66] h-[3px] " style={{width: `${currentSong.progress}%`}}></div>
                 </div>
             </div>
         </div>

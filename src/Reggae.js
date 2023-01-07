@@ -2,41 +2,41 @@ export const raggaeAlbum = [
     {
         id: 0,
         img: '../src/assets/music6.png',
-        title: 'Let me love you - Krisx',
-        nam: 'Single',
-        timestamp:'3: 00',
-        url: '../src/assets/songs/song6.mp3'
+        title: 'Build My Life',
+        nam: 'Pat Barrett',
+        timestamp:'4:06',
+        url: '../src/assets/songs/buildmylife.mp3'
     },
     {
         id: 1,
         img: '../src/assets/music7.png',
-        title: 'eeioeid',
-        nam: 'Single',
-        timestamp:'3: 00',
-        url: '../src/assets/songs/song7.mp3'
+        title: 'A Million Tongues',
+        nam: 'Sinach',
+        timestamp:'7:34',
+        url: '../src/assets/songs/milliontongues.mp3'
     },
     {
         id: 2,
         img: '../src/assets/music8.png',
-        title: 'be a school',
-        nam: 'Single',
-        timestamp:'3: 00',
-        url: '../src/assets/songs/song8.mp3'
+        title: 'Olorun Agbaye',
+        nam: 'Nathaniel Bassey',
+        timestamp:'7:18',
+        url: '../src/assets/songs/nathaniel.mp3'
     },
     {
         id: 3,
         img: '../src/assets/music2.png',
-        title: 'have a school',
-        nam: 'Single',
-        timestamp:'3: 00',
-        url: '../src/assets/songs/song9.mp3'
+        title: 'You Waited',
+        nam: 'Travis Greene',
+        timestamp:'5:53',
+        url: '../src/assets/songs/youwaited.mp3'
     },
     {
         id: 4,
         img: '../src/assets/music3.png',
-        title: 'the lord of all',
-        nam: 'Single',
-        timestamp:'3: 00',
-        url: '../src/assets/songs/song10.mp3'
+        title: 'Jireh',
+        nam: 'Maverick City',
+        timestamp:'9:59',
+        url: '../src/assets/songs/jireh.mp3'
     },
 ]

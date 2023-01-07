@@ -5,7 +5,7 @@ import SideBar from './components/SideBar'
 import { Context } from './Context'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Album from './pages/Album'
-import { songsData } from './songData'
+import { data1 } from './AlbumData'
 import Heart from './assets/Heart.png'
 import Vertical from './assets/more-vertical.png'
 import { goldenAlbum } from './GoldenAlbum'
@@ -16,7 +16,7 @@ function App() {
   const [size, setSize] = useState(window.innerWidth);
   const [show, setShow] = useState(false)
   const [isPlaying, setIsPlaying] = useState(true);
-  const [currentSong, setCurrentSong] = useState(songsData[0])
+  const [currentSong, setCurrentSong] = useState(data1[0])
   const [songAlb, setSongalb] = useState({title: '', desc: '', length: '', img: ''});
   const [selectedSong, setSelectedsong] = useState([])
 
@@ -35,7 +35,7 @@ function App() {
   const showAlbum = (e) => {
     const i = e.currentTarget.id;
     if(i == 1) {
-      setSongalb({title: "Golden age of 80s", 
+      setSongalb({title: "Lofi Beats", 
       desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eligendi voluptate repellat, distinctio sunt maxime.",
       length:"64songs- 3hrs",
       img: e.currentTarget.children[0].children[0].children[0].src

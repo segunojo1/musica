@@ -38,7 +38,7 @@ const Album = ({title, desc, length, img, refCon}) => {
         setIsPlaying(false)
     }
   return (
-    <div className='ml-[3rem] md:ml-[7rem] grid gap-[3rem]'>
+    <div className='ml-[3rem] md:ml-[7rem] grid gap-[3rem] md:mb-[20rem]'>
 
     <div className="pt-[7rem] flex flex-col md:flex-row gap-[2rem] items-center alb">
         <img src={Album1} alt="" className='rounded-3xl'/>
@@ -47,7 +47,7 @@ const Album = ({title, desc, length, img, refCon}) => {
             <p className='text-[#EFEEE0]'>{desc}</p>
             <p className='text-[#EFEEE0]'>{length}</p>
             <div className='flex items-center'>
-                <div className='flex gap-[1rem] text-[#EFEEE0] p-[1.5rem] rounded-full bg-transp items-center' onClick={playAll}>
+                <div className='flex gap-[1rem] text-[#EFEEE0] p-[1.5rem] rounded-full bg-transp items-center cursor-pointer' onClick={playAll}>
                     <img src={Pause} alt="" width='16px' height='16px'/>
                     <p>Play all</p>
                 </div>
@@ -63,7 +63,7 @@ const Album = ({title, desc, length, img, refCon}) => {
     </div>
     <div className='grid gap-[1rem]'>
         {selectedSong.map(({id, title, nam, timestamp, img})=> {
-      return <div id={id} className='flex items-center gap-[2rem] justify-between bg-bgg p-[.7rem] rounded-xl' key={id} onClick={playSong}>
+      return <div id={id} className='flex items-center gap-[2rem] justify-between bg-bgg p-[.7rem] rounded-xl cursor-pointer' key={id} onClick={playSong}>
       <div className='flex items-center gap-[1rem]'>
           <img src={img} alt="" width='39px' height='39px' className='rounded-xl'/>
           <img src={Heart} alt="" />
