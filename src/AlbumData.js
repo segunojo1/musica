@@ -19,41 +19,41 @@ export const data1 = [
         img: Music2,
         title: 'Golden Deer',
         nam: 'Purple Cat',
-        url: '../src/assets/songs/song2.mp3'
+        url: 'song2.mp3'
     },
     {
         id: 2,
         img: Music3,
         title: 'Soaring',
         nam: 'Elior',
-        url: '../src/assets/songs/song3.mp3'
+        url: 'song3.mp3'
     },
     {
         id: 3,
         img: Music4,
         title: 'Consequences',
         nam: 'ENRA',
-        url: '../src/assets/songs/song4.mp3'
+        url: 'song4.mp3'
     },
     {
         id: 4,
         img: Music5,
         title: 'Limits',
         nam: 'John Dillion',
-        url: '../src/assets/songs/song5.mp3'
+        url: 'song5.mp3'
     },
     {
         id: 5,
         img: Music6,
         title: 'Horizon',
         nam: 'kyu',
-        url: '../src/assets/songs/song6.mp3'
+        url: 'song6.mp3'
     },
     {
         id: 6,
         img: Music7,
         title: 'Cancelled',
         nam: 'Eminem',
-        url: '../src/assets/songs/song7.mp3'
+        url: 'song7.mp3'
     }
 ]

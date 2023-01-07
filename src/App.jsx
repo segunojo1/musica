@@ -44,7 +44,7 @@ function App() {
     setCurrentSong(goldenAlbum[0])
     // mapAlb(goldenAlbum)
     }else if(i == 2) {
-      setSongalb({title: "Reggae 'n' blues", 
+      setSongalb({title: "Gospel Music", 
       desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eligendi voluptate repellat, distinctio sunt maxime.",
       length:"30songs- 1hr",
       img: e.currentTarget.children[0].children[0].children[0].src

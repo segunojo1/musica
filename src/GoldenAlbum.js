@@ -5,7 +5,7 @@ export const goldenAlbum = [
         title: 'Golden Deer',
         nam: 'Blue Fox',
         timestamp:'4: 00',
-        url: '../src/assets/songs/song7.mp3'
+        url: 'song7.mp3'
     },
     {
         id: 1,
@@ -13,7 +13,7 @@ export const goldenAlbum = [
         title: 'Moon Winds',
         nam: 'Purple Cats',
         timestamp:'1:16',
-        url: '../src/assets/songs/song2.mp3'
+        url: 'song2.mp3'
     },
     {
         id: 2,
@@ -21,7 +21,7 @@ export const goldenAlbum = [
         title: 'Days Past',
         nam: 'Leny Loops',
         timestamp:'1:55',
-        url: '../src/assets/songs/song3.mp3'
+        url: 'song3.mp3'
     },
     {
         id: 3,
@@ -29,7 +29,7 @@ export const goldenAlbum = [
         title: 'Day Dreaming',
         nam: 'Tenno',
         timestamp:'1:16',
-        url: '../src/assets/songs/song4.mp3'
+        url: 'song4.mp3'
     },
     {
         id: 4,
@@ -37,6 +37,6 @@ export const goldenAlbum = [
         title: 'Shelter',
         nam: 'WYS',
         timestamp:'2:59',
-        url: '../src/assets/songs/song5.mp3'
+        url: 'song5.mp3'
     },
 ]

@@ -5,7 +5,7 @@ export const tommorrowAlbum = [
         title: 'Overgrown',
         nam: 'Tenno',
         timestamp:'1:10',
-        url: '../src/assets/songs/song11.mp3'
+        url: 'song11.mp3'
     },
     {
         id: 1,
@@ -13,7 +13,7 @@ export const tommorrowAlbum = [
         title: 'Boundless',
         nam: 'Eleven',
         timestamp:'2:31',
-        url: '../src/assets/songs/song12.mp3'
+        url: 'song12.mp3'
     },
     {
         id: 2,
@@ -21,7 +21,7 @@ export const tommorrowAlbum = [
         title: 'Let me love you ',
         nam: 'Krisx',
         timestamp:'1:48',
-        url: '../src/assets/songs/song13.mp3'
+        url: 'song13.mp3'
     },
     {
         id: 3,
@@ -29,7 +29,7 @@ export const tommorrowAlbum = [
         title: 'Rainy Day',
         nam: 'Nuer',
         timestamp:'2:25',
-        url: '../src/assets/songs/song14.mp3'
+        url: 'song14.mp3'
     },
     {
         id: 4,
@@ -37,6 +37,6 @@ export const tommorrowAlbum = [
         title: 'Consequences',
         nam: 'Elra',
         timestamp:'2:28',
-        url: '../src/assets/songs/song15.mp3'
+        url: 'song15.mp3'
     },
 ]
