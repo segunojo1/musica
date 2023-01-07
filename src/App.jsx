@@ -18,7 +18,8 @@ function App() {
   const [isPlaying, setIsPlaying] = useState(true);
   const [currentSong, setCurrentSong] = useState(data1[0])
   const [songAlb, setSongalb] = useState({title: '', desc: '', length: '', img: ''});
-  const [selectedSong, setSelectedsong] = useState([])
+  const [selectedSong, setSelectedsong] = useState([]);
+  const [search, setSearch] = useState();
 
   const refCon = useRef(null)
 
@@ -62,7 +63,7 @@ function App() {
     }
   }
   return (
-    <Context.Provider value={{size, setSize, show, setShow, isPlaying, setIsPlaying, currentSong, setCurrentSong, selectedSong, setSelectedsong}}>
+    <Context.Provider value={{size, setSize, show, setShow, isPlaying, setIsPlaying, currentSong, setCurrentSong, selectedSong, setSelectedsong, search, setSearch}}>
       <BrowserRouter>
         <div className="App bg-bla text-white ">
           <div className='fle nn p-[1rem] md:p-[2rem] md:pr-[5rem]'>

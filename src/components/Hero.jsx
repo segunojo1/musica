@@ -7,9 +7,11 @@ import Album1 from '../assets/album2.png'
 import Album2 from '../assets/album1.png'
 import Album3 from '../assets/album4.png'
 import { Context } from '../Context'
+import { useNavigate } from 'react-router-dom'
 
 const Hero = ({showAlbum}) => {
   const {size, setSize }  = useContext(Context);
+  const {search, setSearch} = useContext(Context);
   useEffect(() => {
     window.addEventListener('resize', changeImg);
 
@@ -18,11 +20,26 @@ const Hero = ({showAlbum}) => {
   const changeImg = () => {
       setSize(window.innerWidth);
   }
+
+  //DISPLAY SEARCH
+  const navigate = useNavigate();
+  const showSearch = (e)=> {
+    e.preventDefault();
+    navigate('/search')
+  }
+
+  //SAE TYPED INFO
+  const searchShow = (e) => {
+    setSearch(e.target.value);
+    console.log(search);
+  }
   return (
     <div className='mb-[3rem] mt-[3rem] md:mt-0' >
         <div className='relative mb-[1rem]'>
             <CiSearch className='absolute my-auto h-full ml-[2rem]'/>
-            <input type="text" className='p-[1rem] px-[4rem]  w-full text-lg outline-text-col focus:outline-double bg-transparent rounded-full' placeholder='Search artists'/>
+            <form onSubmit={showSearch}>
+            <input type="text" className='p-[1rem] px-[4rem]  w-full text-lg outline-text-col focus:outline-double bg-transparent rounded-full' placeholder='Search artists' onChange={searchShow}/>
+            </form>
         </div>
         <div className='flex flex-col xl:flex-row gap-[2rem]'>
             <img src={size <= '762' ? MobileHero : HeroImg} alt="hero" className=''/>
