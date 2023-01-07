@@ -9,7 +9,7 @@ const ChartsComp = ({img, title, name, timestamp, id, showAlbum}) => {
  
   return (
     <div id={id} className='bg-dark p-[1rem] flex items-center justify-between rounded-lg md:w-[29rem] w-[80%] shrink-0' ref={albumRef} onClick={showAlbum}>
-        <Link to='/home/album' >
+        <Link to='/album' >
           <div className='flex flex-col md:flex-row gap-[2rem]'   >
               <img src={img} alt="" />
               <div>
