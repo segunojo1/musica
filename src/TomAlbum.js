@@ -1,7 +1,7 @@
 export const tommorrowAlbum = [
     {
         id: 0,
-        img: '../src/assets/music2.png',
+        img: 'music2.png',
         title: 'Overgrown',
         nam: 'Tenno',
         timestamp:'1:10',
@@ -9,7 +9,7 @@ export const tommorrowAlbum = [
     },
     {
         id: 1,
-        img: '../src/assets/music3.png',
+        img: 'music3.png',
         title: 'Boundless',
         nam: 'Eleven',
         timestamp:'2:31',
@@ -17,7 +17,7 @@ export const tommorrowAlbum = [
     },
     {
         id: 2,
-        img: '../src/assets/music4.png',
+        img: 'music4.png',
         title: 'Let me love you ',
         nam: 'Krisx',
         timestamp:'1:48',
@@ -25,7 +25,7 @@ export const tommorrowAlbum = [
     },
     {
         id: 3,
-        img: '../src/assets/music5.png',
+        img: 'music5.png',
         title: 'Rainy Day',
         nam: 'Nuer',
         timestamp:'2:25',
@@ -33,7 +33,7 @@ export const tommorrowAlbum = [
     },
     {
         id: 4,
-        img: '../src/assets/music7.png',
+        img: 'music7.png',
         title: 'Consequences',
         nam: 'Elra',
         timestamp:'2:28',

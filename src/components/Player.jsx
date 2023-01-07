@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useRef, useState } from 'react'
-import Music7 from '../assets/music8.png'
 import Shuffle from '../assets/shuffle.png'
 import Previous from '../assets/previous.png'
 import Pause from '../assets/pause.png'
@@ -22,7 +21,7 @@ const Player = ({refCon}) => {
    
     useEffect(()=> {
         console.log(refCon);
-        setCurrentSong({...currentSong, progress: 0})
+        setCurrentSong({...currentSong, progress: 0, volume: 1})
     },[]);
     
     //PLAY AND PAUSE
@@ -131,7 +130,17 @@ const Player = ({refCon}) => {
         const offset = e.nativeEvent.offsetX;
 
         const progress = offset / width;
-        refCon.current.currentTime = progress * currentSong.length
+        refCon.current.currentTime = progress * currentSong.length;
+        
+    }
+
+    const volRef = useRef(null)
+    const changeVol = (e) => {
+        const width = volRef.current.clientWidth;
+        const offset = e.nativeEvent.offsetX;
+
+        setCurrentSong({...currentSong, volume: offset / width})
+        refCon.current.volume = currentSong.volume
     }
 
   return (
@@ -148,20 +157,23 @@ const Player = ({refCon}) => {
             <div className='flex items-center gap-[1.5rem] mb-[.5rem]'>
                 <img src={Shuffle} alt="shuffle"  className='cursor-pointer'/>
                 <img src={Previous} alt="Previous"  className='cursor-pointer' onClick={prev}/>
-                {!isPlaying ? <BsPauseCircleFill onClick={playa}/> : <BsFillPlayCircleFill onClick={playa}/>} 
+                {!isPlaying ? <BsPauseCircleFill onClick={playa} className="cursor-pointer"/> : <BsFillPlayCircleFill onClick={playa} className="cursor-pointer"/>} 
                 <audio src={currentSong.url} ref={refCon} preload="auto" onTimeUpdate={changeProgress}></audio>
                 <img src={Next} alt="next"  className='cursor-pointer' onClick={next}/>
                 <img src={Repeat} alt="repeat"  className='cursor-pointer'/>
             </div>
             <div className='w-[100%]'>
-                <div className="navigation w-[500px] h-[3px] bg-white/30" onClick={checkWidth} ref = {clickRef}>
-                    <div className="seekbar bg-[#FACD66] h-[3px] " style={{width: `${currentSong.progress}%`}}></div>
+                <div className="navigation w-[500px] h-[3px] bg-white/30 relative cursor-pointer" onClick={checkWidth} ref = {clickRef}>
+                    <div className="circ w-[10px] h-[10px] bg-[#FACD66] rounded-full absolute mt-[-3px]" style={{marginLeft: `${currentSong.progress}%`}}></div>
+                    <div className="seekbar bg-[#FACD66] h-[3px]" style={{width: `${currentSong.progress}%`}}></div>
                 </div>
             </div>
         </div>
         <div className='flex items-center gap-[10px]'>
             <img src={Volume} alt="volume" className='cursor-pointer'/>
-            <div className='w-[100px] h-[3px] bg-white/30'></div>
+            <div className='w-[100px] h-[3px] bg-white/30' onClick={changeVol} ref={volRef}>
+                <div className="seekbar bg-[#FACD66] h-[3px] " style={{width: `${currentSong.volume * 100}%`}}></div>
+            </div>
         </div>
         </div>
     </div>

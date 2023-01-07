@@ -1,7 +1,7 @@
 export const goldenAlbum = [
     {
         id: 0,
-        img: '../src/assets/music2.png',
+        img: 'music2.png',
         title: 'Golden Deer',
         nam: 'Blue Fox',
         timestamp:'4: 00',
@@ -9,7 +9,7 @@ export const goldenAlbum = [
     },
     {
         id: 1,
-        img: '../src/assets/music3.png',
+        img: 'music3.png',
         title: 'Moon Winds',
         nam: 'Purple Cats',
         timestamp:'1:16',
@@ -17,7 +17,7 @@ export const goldenAlbum = [
     },
     {
         id: 2,
-        img: '../src/assets/music4.png',
+        img: 'music4.png',
         title: 'Days Past',
         nam: 'Leny Loops',
         timestamp:'1:55',
@@ -25,7 +25,7 @@ export const goldenAlbum = [
     },
     {
         id: 3,
-        img: '../src/assets/music5.png',
+        img: 'music5.png',
         title: 'Day Dreaming',
         nam: 'Tenno',
         timestamp:'1:16',
@@ -33,7 +33,7 @@ export const goldenAlbum = [
     },
     {
         id: 4,
-        img: '../src/assets/music6.png',
+        img: 'music6.png',
         title: 'Shelter',
         nam: 'WYS',
         timestamp:'2:59',

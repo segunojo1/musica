@@ -1,7 +1,7 @@
 export const raggaeAlbum = [
     {
         id: 0,
-        img: '../src/assets/music6.png',
+        img: 'music6.png',
         title: 'Build My Life',
         nam: 'Pat Barrett',
         timestamp:'4:06',
@@ -9,7 +9,7 @@ export const raggaeAlbum = [
     },
     {
         id: 1,
-        img: '../src/assets/music7.png',
+        img: 'music7.png',
         title: 'A Million Tongues',
         nam: 'Sinach',
         timestamp:'7:34',
@@ -17,7 +17,7 @@ export const raggaeAlbum = [
     },
     {
         id: 2,
-        img: '../src/assets/music8.png',
+        img: 'music8.png',
         title: 'Olorun Agbaye',
         nam: 'Nathaniel Bassey',
         timestamp:'7:18',
@@ -25,7 +25,7 @@ export const raggaeAlbum = [
     },
     {
         id: 3,
-        img: '../src/assets/music2.png',
+        img: 'music2.png',
         title: 'You Waited',
         nam: 'Travis Greene',
         timestamp:'5:53',
@@ -33,7 +33,7 @@ export const raggaeAlbum = [
     },
     {
         id: 4,
-        img: '../src/assets/music3.png',
+        img: 'music3.png',
         title: 'Jireh',
         nam: 'Maverick City',
         timestamp:'9:59',
