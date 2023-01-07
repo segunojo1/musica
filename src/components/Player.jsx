@@ -64,6 +64,14 @@ const Player = ({refCon}) => {
             }else{
                 setCurrentSong(tommorrowAlbum[index+1])
             }
+        }else{
+            const index = songsData.findIndex(x=> x.title == currentSong.title)
+            console.log(index);
+            if(index == 4) {
+                setCurrentSong(songsData[0])
+            }else{
+                setCurrentSong(songsData[index+1])
+            }
         }
         setIsPlaying(true)
         // playNext()
@@ -92,8 +100,23 @@ const Player = ({refCon}) => {
             }else{
                 setCurrentSong(tommorrowAlbum[index-1]);
             }
+        }else{
+            const index = songsData.findIndex(x=> x.title == currentSong.title);
+            if(index == 0) {
+                setCurrentSong(songsData[songsData.length - 1])
+            }else{
+                setCurrentSong(songsData[index-1]);
+            }
         }
         setIsPlaying(true)
+    }
+
+    //SHOW PROGRESS BAR
+    const changeProgress = () => {
+        const duration = refCon.current.duration;
+        const currentTime = refCon.current.currentTime
+
+        setCurrentSong({...currentSong, progress: (currentTime/duration) * 100, length: duration})
     }
   return (
     <div className='fixed bottom-0 backdrop-blur-xl bg-transp w-full'>
@@ -110,11 +133,15 @@ const Player = ({refCon}) => {
                 <img src={Shuffle} alt="shuffle"  className='cursor-pointer'/>
                 <img src={Previous} alt="Previous"  className='cursor-pointer' onClick={prev}/>
                 {!isPlaying ? <BsPauseCircleFill onClick={playa}/> : <BsFillPlayCircleFill onClick={playa}/>} 
-                <audio src={currentSong.url} ref={refCon} preload="auto"></audio>
+                <audio src={currentSong.url} ref={refCon} preload="auto" onTimeUpdate={changeProgress}></audio>
                 <img src={Next} alt="next"  className='cursor-pointer' onClick={next}/>
                 <img src={Repeat} alt="repeat"  className='cursor-pointer'/>
             </div>
-            <div className='w-[500px] h-[3px] bg-white/30'></div>
+            <div className='w-[100%]'>
+                <div className="navigation w-[500px] h-[3px] bg-white/30">
+                    <div className="seekbar bg-red h-[3px] " style={{width: `${currentSong.progress}%`}}></div>
+                </div>
+            </div>
         </div>
         <div className='flex items-center gap-[10px]'>
             <img src={Volume} alt="volume" className='cursor-pointer'/>
