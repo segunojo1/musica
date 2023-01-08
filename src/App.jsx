@@ -74,7 +74,7 @@ function App() {
             <Route path='/album' element={<Album title={songAlb.title} desc={songAlb.desc} length={songAlb.length} img= {songAlb.img} selectedSong={selectedSong} refCon={refCon}/>}/>
           </Routes>
           </div>
-            <Player refCon={refCon}/>
+            {/* <Player refCon={refCon}/> */}
         </div>
       </BrowserRouter>
 

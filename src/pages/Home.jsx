@@ -12,7 +12,7 @@ const Home = ({showAlbum, refCon}) => {
   return (
     <div className=''>
       
-        <div className='ml-[3rem] md:ml-[7rem]'>
+        <div className='ml-[1rem] md:ml-[7rem]'>
             <Hero showAlbum={showAlbum}/>
             <NewReleases refCon={refCon}/>
             <Popular refCon={refCon}/>
