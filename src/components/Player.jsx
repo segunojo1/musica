@@ -12,11 +12,14 @@ import { Context } from '../Context'
 import { goldenAlbum } from '../GoldenAlbum'
 import { raggaeAlbum } from '../Reggae'
 import { tommorrowAlbum } from '../TomAlbum'
+import {SlArrowDown} from 'react-icons/sl'
 
 const Player = ({refCon}) => {
     const {isPlaying, setIsPlaying} = useContext(Context)
     const {currentSong, setCurrentSong} = useContext(Context)
     const {selectedSong, setSelectedsong} = useContext(Context)
+    const [showMoremobile, setShowmoremobile] = useState(false)
+    const {size, setSize} = useContext(Context);
     
    
     useEffect(()=> {
@@ -143,24 +146,38 @@ const Player = ({refCon}) => {
         refCon.current.volume = currentSong.volume
     }
 
+    const playRef = useRef(null)
+    const showFull = (e) => {
+        const clas = e.currentTarget.className;
+        console.log(clas);
+        if(size < 762) {
+
+            setShowmoremobile(prev=> !prev)
+        }
+    }
   return (
-    <div className='fixed bottom-0 backdrop-blur-xl bg-transp w-full'>
-        <div className='lg:pr-[5rem] lg:pl-[8rem] lg:pb-[.7rem] justify-between flex p-[1rem]'>
+    <div>
+        
+    { showMoremobile ? 
+        <div className= 'fixed bottom-0 backdrop-blur-xl bg-transp w-full md:h-fit h-full' ref={playRef} onClick={showFull}>
+        
+        <div className='lg:pr-[5rem] lg:pl-[8rem] lg:pb-[.7rem] justify-between flex flex-col p-[1rem] h-full'>
         <div className='flex items-center gap-[10px] w-[250px]'>
             <img src={currentSong.img} alt="" height='49px' width='49px' className='rounded-2xl'/>
             <div>
+                <SlArrowDown />
                 <p>{currentSong.title}</p>
                 <p className='text-sm text-text-col'>{currentSong.nam}</p>
             </div>
         </div>
         <div className='flex flex-col justify-center items-center'>
             <div className='flex items-center gap-[1.5rem] mb-[.5rem]'>
-                <img src={Shuffle} alt="shuffle"  className='cursor-pointer hidden md:block'/>
-                <img src={Previous} alt="Previous"  className='cursor-pointer hidden md:block' onClick={prev}/>
+                <img src={Shuffle} alt="shuffle"  className='cursor-pointer'/>
+                <img src={Previous} alt="Previous"  className='cursor-pointer' onClick={prev}/>
                 {!isPlaying ? <BsPauseCircleFill onClick={playa} className="cursor-pointer w-[40px] h-[40px]"/> : <BsFillPlayCircleFill onClick={playa} className="cursor-pointer w-[40px] h-[40px]"/>} 
                 <audio src={currentSong.url} ref={refCon} preload="auto" onTimeUpdate={changeProgress}></audio>
-                <img src={Next} alt="next"  className='cursor-pointer hidden md:block' onClick={next}/>
-                <img src={Repeat} alt="repeat"  className='cursor-pointer hidden md:block'/>
+                <img src={Next} alt="next"  className='cursor-pointer' onClick={next}/>
+                <img src={Repeat} alt="repeat"  className='cursor-pointer' />
             </div>
             <div className='w-[100%] hidden md:block'>
                 <div className="navigation w-[500px] h-[3px] bg-white/30 relative cursor-pointer" onClick={checkWidth} ref = {clickRef}>
@@ -176,6 +193,42 @@ const Player = ({refCon}) => {
             </div>
         </div>
         </div>
+    </div> : 
+    <div className= 'fixed bottom-0 backdrop-blur-xl bg-transp w-full ' ref={playRef} onClick={showFull}>
+        
+    <div className='lg:pr-[5rem] lg:pl-[8rem] lg:pb-[.7rem] justify-between flex p-[1rem] h-full'>
+    <div className='flex items-center gap-[10px] w-[250px]'>
+        <img src={currentSong.img} alt="" height='49px' width='49px' className='rounded-2xl'/>
+        <div>
+            <SlArrowDown />
+            <p>{currentSong.title}</p>
+            <p className='text-sm text-text-col'>{currentSong.nam}</p>
+        </div>
+    </div>
+    <div className='flex flex-col justify-center items-center'>
+        <div className='flex items-center gap-[1.5rem] mb-[.5rem]'>
+            <img src={Shuffle} alt="shuffle"  className='cursor-pointer hidden md:block'/>
+            <img src={Previous} alt="Previous"  className='cursor-pointer hidden md:block' onClick={prev}/>
+            {!isPlaying ? <BsPauseCircleFill onClick={playa} className="cursor-pointer w-[40px] h-[40px]"/> : <BsFillPlayCircleFill onClick={playa} className="cursor-pointer w-[40px] h-[40px]"/>} 
+            <audio src={currentSong.url} ref={refCon} preload="auto" onTimeUpdate={changeProgress}></audio>
+            <img src={Next} alt="next"  className='cursor-pointer hidden md:block' onClick={next}/>
+            <img src={Repeat} alt="repeat"  className='cursor-pointer hidden md:block' />
+        </div>
+        <div className='w-[100%] hidden md:block'>
+            <div className="navigation w-[500px] h-[3px] bg-white/30 relative cursor-pointer" onClick={checkWidth} ref = {clickRef}>
+                <div className="circ w-[10px] h-[10px] bg-[#FACD66] rounded-full absolute mt-[-3px]" style={{marginLeft: `${currentSong.progress}%`}}></div>
+                <div className="seekbar bg-[#FACD66] h-[3px]" style={{width: `${currentSong.progress}%`}}></div>
+            </div>
+        </div>
+    </div>
+    <div className='md:flex items-center gap-[10px] hidden'>
+        <img src={Volume} alt="volume" className='cursor-pointer'/>
+        <div className='w-[100px] h-[3px] bg-white/30' onClick={changeVol} ref={volRef}>
+            <div className="seekbar bg-[#FACD66] h-[3px] " style={{width: `${currentSong.volume * 100}%`}}></div>
+        </div>
+    </div>
+    </div>
+</div>}
     </div>
   )
 }
