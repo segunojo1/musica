@@ -12,6 +12,7 @@ import { goldenAlbum } from './GoldenAlbum'
 import { raggaeAlbum } from './Reggae'
 import { tommorrowAlbum } from './TomAlbum'
 import SearchRes from './components/SearchRes'
+import Collection from './pages/Collection'
 
 function App() {
   const [size, setSize] = useState(window.innerWidth);
@@ -74,6 +75,7 @@ function App() {
             <Route path='/' element={<Home showAlbum={showAlbum} refCon={refCon}/>} />
             <Route path='/album' element={<Album title={songAlb.title} desc={songAlb.desc} length={songAlb.length} img= {songAlb.img} selectedSong={selectedSong} refCon={refCon}/>}/>
             <Route path='/search' element={<SearchRes />}/>
+            <Route path="/collections" element={<Collection />}/>
           </Routes>
           </div>
             <Player refCon={refCon}/>
