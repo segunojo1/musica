@@ -18,23 +18,18 @@ const Album = ({title, desc, length, img, refCon}) => {
     const playAll = () => {
         console.log(currentSong);
         setCurrentSong(selectedSong[0])
-        setIsPlaying(true);
+        setIsPlaying(prev => !prev);
         console.log(isPlaying);
-        if(isPlaying) {
-            refCon.current.play();
-        }else{
-            refCon.current.pause()
-        }
+        refCon.current.play()
     }
 
     //PLAY SINGLE SONG
     const playSong = (e) => {
-        setIsPlaying(true)
+        setIsPlaying(prev=> !prev)
         refCon.current.pause();
         const id = e.currentTarget.id;
         setCurrentSong(selectedSong[id]);
         refCon.current.play()
-        setIsPlaying(false)
     }
   return (
     <div className='md:ml-[7rem] grid gap-[3rem] md:mb-[20rem]'>
