@@ -45,7 +45,7 @@ const Album = ({title, desc, length, img, refCon}) => {
             <h1 className='text-3xl text-[#A4C7C6]'>{title}</h1>
             <p className='text-[#EFEEE0]'>{desc}</p>
             <p className='text-[#EFEEE0]'>{length}</p>
-            <div className='flex items-center flex-col gap-[1rem]'>
+            <div className='flex items-center flex-col md:flex-row gap-[1rem]'>
                 <div className='flex gap-[1rem] text-[#EFEEE0] p-[1.5rem] rounded-full bg-transp items-center cursor-pointer' onClick={playAll}>
                     <img src={Pause} alt="" width='16px' height='16px'/>
                     <p>Play all</p>

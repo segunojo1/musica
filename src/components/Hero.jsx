@@ -42,7 +42,11 @@ const Hero = ({showAlbum}) => {
             </form>
         </div>
         <div className='flex flex-col xl:flex-row gap-[2rem]'>
-            <img src={size <= '762' ? MobileHero : HeroImg} alt="hero" className=''/>
+          <div>
+
+          <img src={size <= '762' ? MobileHero : HeroImg} alt="hero" className=''/>
+          <i>Built with love by <a href="https://twitter.com/segun0x" className='text-[#FACD66]'>Segun Ojo</a></i>
+          </div>
             <div className=' grid gap-[.5rem] overflow-hidden'>
                 <h1 className='text-3xl'>Top charts</h1>
                 <div className='flex md:flex-col gap-[.5rem] chart'>
