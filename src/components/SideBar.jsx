@@ -35,14 +35,14 @@ const SideBar = () => {
                 <NavLink to='/' className={({isActive}) => (
                       isActive ? activeLink : norm
                 )
-                } >
+                } onClick={clickFunc} >
                   <img src={Homeact} alt="home" />
                   <p  className='lg:hidden'>Home</p>
                 </NavLink>
               <NavLink to='/collections' className={({isActive}) => (
                       isActive ? activeLink : norm
                 )
-                }>
+                } onClick={clickFunc}>
                 <img src={Playlist} alt="playlist" />
                 <p  className='lg:hidden'>My collections</p>
               </NavLink>
