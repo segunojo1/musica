@@ -11,6 +11,7 @@ import Vertical from './assets/more-vertical.png'
 import { goldenAlbum } from './GoldenAlbum'
 import { raggaeAlbum } from './Reggae'
 import { tommorrowAlbum } from './TomAlbum'
+import SearchRes from './components/SearchRes'
 
 function App() {
   const [size, setSize] = useState(window.innerWidth);
@@ -38,7 +39,7 @@ function App() {
     if(i == 1) {
       setSongalb({title: "Lofi Beats", 
       desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eligendi voluptate repellat, distinctio sunt maxime.",
-      length:"64songs- 3hrs",
+      length:"5songs- 10mins",
       img: e.currentTarget.children[0].children[0].children[0].src
     });
     setSelectedsong(goldenAlbum)
@@ -47,7 +48,7 @@ function App() {
     }else if(i == 2) {
       setSongalb({title: "Gospel Music", 
       desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eligendi voluptate repellat, distinctio sunt maxime.",
-      length:"30songs- 1hr",
+      length:"5songs- 30mins",
       img: e.currentTarget.children[0].children[0].children[0].src
     })
     setSelectedsong(raggaeAlbum)
@@ -55,7 +56,7 @@ function App() {
     }else{
       setSongalb({title: "Tomorrow's Tunes", 
       desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eligendi voluptate repellat, distinctio sunt maxime.",
-      length:"30songs- 1hr",
+      length:"5songs- 10mins",
       img: e.currentTarget.children[0].children[0].children[0].src
     })
     setSelectedsong(tommorrowAlbum)
@@ -72,6 +73,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Home showAlbum={showAlbum} refCon={refCon}/>} />
             <Route path='/album' element={<Album title={songAlb.title} desc={songAlb.desc} length={songAlb.length} img= {songAlb.img} selectedSong={selectedSong} refCon={refCon}/>}/>
+            <Route path='/search' element={<SearchRes />}/>
           </Routes>
           </div>
             <Player refCon={refCon}/>

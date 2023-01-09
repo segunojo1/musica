@@ -15,7 +15,7 @@ export const songsData = [
         url : '../src/assets/songs/song3.mp3'
     },
     {
-        'title' : 'Daydreaming',
+        title : 'Daydreaming',
         nam: 'Tenno',
         url : '../src/assets/songs/song4.mp3'
     },
