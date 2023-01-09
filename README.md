@@ -14,7 +14,7 @@ Musica is a simple music player, which was a twitter challenge and I built it...
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://musica-music.netlify.app)
+- Live Site URL: [Musica](https://musica-music.netlify.app)
 
 ### Built with
 
