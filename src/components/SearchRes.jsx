@@ -32,7 +32,7 @@ const SearchRes = () => {
       <p className='w-[100px] hidden lg:block'>min</p>
       <img src={Vertical} alt="vertical" />
   </div>
-                </div> : <div>No songs found</div>
+                </div> : <div className='text-center'>No songs found</div>
     }
     </div>
   )
