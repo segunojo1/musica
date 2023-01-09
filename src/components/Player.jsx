@@ -168,7 +168,7 @@ const Player = ({refCon}) => {
         <div className='lg:pr-[5rem] lg:pl-[8rem] lg:pb-[.7rem] justify-between items-center flex flex-col p-[1rem] h-full'>
         <SlArrowDown className='align-left cursor-pointer' onClick={closem}/>
         <div className='flex flex-col items-left gap-[10rem] ' >
-            <div className="cont w-[400px] h-[400px] bg-bla"></div>
+            <div className="cont w-[300px] h-[300px] bg-bla"></div>
             <div>
                 <p>{currentSong.title}</p>
                 <p className='text-sm text-text-col'>{currentSong.nam}</p>
@@ -185,7 +185,7 @@ const Player = ({refCon}) => {
                 <img src={Repeat} alt="repeat"  className='cursor-pointer' />
             </div>
             <div className='w-[100%] '>
-                <div className="navigation w-[500px] h-[3px] bg-white/30 relative cursor-pointer" onClick={checkWidth} ref = {clickRef}>
+                <div className="navigation w-[300px] h-[3px] bg-white/30 relative cursor-pointer" onClick={checkWidth} ref = {clickRef}>
                     <div className="circ w-[10px] h-[10px] bg-[#FACD66] rounded-full absolute mt-[-3px]" style={{marginLeft: `${currentSong.progress}%`}}></div>
                     <div className="seekbar bg-[#FACD66] h-[3px]" style={{width: `${currentSong.progress}%`}}></div>
                 </div>
@@ -200,10 +200,10 @@ const Player = ({refCon}) => {
         </div>
         </div>
     </div> : 
-    <div className= 'fixed bottom-0 backdrop-blur-xl bg-transp w-full ' ref={playRef} onClick={showFull}>
+    <div className= 'fixed bottom-0 backdrop-blur-xl bg-transp w-full ' ref={playRef} >
         
     <div className='lg:pr-[5rem] lg:pl-[8rem] lg:pb-[.7rem] justify-between flex p-[1rem] h-full'>
-    <div className='flex items-center gap-[10px] w-[250px]'>
+    <div className='flex items-center gap-[10px] w-[250px]' onClick={showFull}>
         <img src={currentSong.img} alt="" height='49px' width='49px' className='rounded-2xl'/>
         <div>
             <p>{currentSong.title}</p>
