@@ -47,7 +47,7 @@ const Hero = ({showAlbum}) => {
           <img src={size <= '762' ? MobileHero : HeroImg} alt="hero" className=''/>
           <i>Built with love by <a href="https://twitter.com/segun0x" className='text-[#FACD66]'>Segun Ojo</a></i>
           </div>
-            <div className=' grid gap-[.5rem] overflow-hidden'>
+            <div className=' grid gap-[.5rem] '>
                 <h1 className='text-3xl'>Top charts</h1>
                 <div className='flex md:flex-col gap-[.5rem] chart'>
                   <ChartsComp id='1' img={Album1} title='Lofi Beats' name="Sean Swadder" timestamp="3:50:5" showAlbum={showAlbum}/>
