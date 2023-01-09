@@ -155,21 +155,26 @@ const Player = ({refCon}) => {
             setShowmoremobile(true)
         }
     }
+    const closem = () => {
+        setShowmoremobile(prev=> !prev)
+        console.log('ff');
+    }
   return (
     <div>
         
     { showMoremobile ? 
-        <div className= 'fixed bottom-0 backdrop-blur-xl bg-transp w-full md:h-fit h-full' ref={playRef} onClick={showFull}>
+        <div className= 'fixed bottom-0 backdrop-blur-xl bg-transp w-full md:h-fit h-full' ref={playRef} >
         
-        <div className='lg:pr-[5rem] lg:pl-[8rem] lg:pb-[.7rem] items-center flex flex-col p-[1rem] h-full'>
-        <div className='flex flex-col items-left gap-[10px] '>
+        <div className='lg:pr-[5rem] lg:pl-[8rem] lg:pb-[.7rem] justify-between items-center flex flex-col p-[1rem] h-full'>
+        <SlArrowDown className='align-left cursor-pointer' onClick={closem}/>
+        <div className='flex flex-col items-left gap-[10rem] ' >
             <div className="cont w-[400px] h-[400px] bg-bla"></div>
             <div>
                 <p>{currentSong.title}</p>
                 <p className='text-sm text-text-col'>{currentSong.nam}</p>
             </div>
         </div>
-        <div className='flex gap-[1rem]'>
+        <div className='flex gap-[1rem] mb-[3rem]'>
         <div className='flex flex-col justify-center items-center'>
             <div className='flex items-center gap-[1.5rem] mb-[.5rem]'>
                 <img src={Shuffle} alt="shuffle"  className='cursor-pointer'/>
@@ -201,7 +206,6 @@ const Player = ({refCon}) => {
     <div className='flex items-center gap-[10px] w-[250px]'>
         <img src={currentSong.img} alt="" height='49px' width='49px' className='rounded-2xl'/>
         <div>
-            <SlArrowDown />
             <p>{currentSong.title}</p>
             <p className='text-sm text-text-col'>{currentSong.nam}</p>
         </div>
