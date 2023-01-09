@@ -167,7 +167,7 @@ const Player = ({refCon}) => {
         
         <div className='lg:pr-[5rem] lg:pl-[8rem] lg:pb-[.7rem] justify-around items-center flex flex-col p-[1rem] h-full'>
         <SlArrowDown className='align-left cursor-pointer' onClick={closem}/>
-        <div className='flex flex-col items-left gap-[6rem] ' >
+        <div className='flex flex-col items-left gap-[3rem] ' >
             <div className="cont w-[300px] h-[300px] bg-bla"></div>
             <div>
                 <p>{currentSong.title}</p>

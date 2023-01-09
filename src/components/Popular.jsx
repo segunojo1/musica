@@ -22,7 +22,7 @@ const Popular = ({refCon}) => {
     }
     const items = data1.map(({id, img, title, nam})=> {
         return (
-            <div id={id} className='gap-[1rem] shrink-0' key={nam} onClick={playSong}>
+            <div id={id} className='gap-[1rem] shrink-0 cursor-pointer' key={nam} onClick={playSong}>
                 <img src={img} alt="" className='mb-[.5rem] rounded-3xl'/>
                 <p>{title}</p>
                 <p className='text-sm text-text-col'>{nam}</p>
