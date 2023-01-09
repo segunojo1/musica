@@ -161,26 +161,26 @@ const Player = ({refCon}) => {
     }
   return (
     <div>
-        
+        <audio src={currentSong.url} ref={refCon} preload="auto" onTimeUpdate={changeProgress}></audio>
     { showMoremobile ? 
         <div className= 'fixed bottom-0 backdrop-blur-xl bg-transp w-full md:h-fit h-full' ref={playRef} >
         
-        <div className='lg:pr-[5rem] lg:pl-[8rem] lg:pb-[.7rem] justify-between items-center flex flex-col p-[1rem] h-full'>
+        <div className='lg:pr-[5rem] lg:pl-[8rem] lg:pb-[.7rem] justify-around items-center flex flex-col p-[1rem] h-full'>
         <SlArrowDown className='align-left cursor-pointer' onClick={closem}/>
-        <div className='flex flex-col items-left gap-[10rem] ' >
+        <div className='flex flex-col items-left gap-[6rem] ' >
             <div className="cont w-[300px] h-[300px] bg-bla"></div>
             <div>
                 <p>{currentSong.title}</p>
                 <p className='text-sm text-text-col'>{currentSong.nam}</p>
             </div>
         </div>
-        <div className='flex gap-[1rem] mb-[3rem]'>
+        <div className='flex gap-[1rem] '>
         <div className='flex flex-col justify-center items-center'>
             <div className='flex items-center gap-[1.5rem] mb-[.5rem]'>
                 <img src={Shuffle} alt="shuffle"  className='cursor-pointer'/>
                 <img src={Previous} alt="Previous"  className='cursor-pointer' onClick={prev}/>
                 {!isPlaying ? <BsPauseCircleFill onClick={playa} className="cursor-pointer w-[40px] h-[40px]"/> : <BsFillPlayCircleFill onClick={playa} className="cursor-pointer w-[40px] h-[40px]"/>} 
-                <audio src={currentSong.url} ref={refCon} preload="auto" onTimeUpdate={changeProgress}></audio>
+                
                 <img src={Next} alt="next"  className='cursor-pointer' onClick={next}/>
                 <img src={Repeat} alt="repeat"  className='cursor-pointer' />
             </div>
@@ -215,7 +215,7 @@ const Player = ({refCon}) => {
             <img src={Shuffle} alt="shuffle"  className='cursor-pointer hidden md:block'/>
             <img src={Previous} alt="Previous"  className='cursor-pointer hidden md:block' onClick={prev}/>
             {!isPlaying ? <BsPauseCircleFill onClick={playa} className="cursor-pointer w-[40px] h-[40px]"/> : <BsFillPlayCircleFill onClick={playa} className="cursor-pointer w-[40px] h-[40px]"/>} 
-            <audio src={currentSong.url} ref={refCon} preload="auto" onTimeUpdate={changeProgress}></audio>
+            {/* <audio src={currentSong.url} ref={refCon} preload="auto" onTimeUpdate={changeProgress}></audio> */}
             <img src={Next} alt="next"  className='cursor-pointer hidden md:block' onClick={next}/>
             <img src={Repeat} alt="repeat"  className='cursor-pointer hidden md:block' />
         </div>
