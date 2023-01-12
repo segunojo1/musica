@@ -30,7 +30,7 @@ const NewReleases = ({refCon}) => {
         )
     })
   return (
-    <div className='mb-[2rem]'>
+    <div className='mb-[2rem] slide'>
         <h1 className='text-3xl mb-[1.5rem]'>New releases.</h1>
         <div className='flex gap-[3rem] overflow-scroll thr'>
             {items}
