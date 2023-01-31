@@ -35,6 +35,6 @@ I learned more about all these hooks with this project
 
 ## Author
 
-- Website - [Segun Ojo](https://sneaker-product.netlify.app)
+- Website - [Segun Ojo](https://segunojo.netlify.app)
 - Twitter - [@segun0x](https://www.twitter.com/segun0x)
 - Instagram - [@__segunx](https://www.instagram.com/__segunx)
